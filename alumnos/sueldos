@@ -1,0 +1,102 @@
+Proceso alumnos
+	entero: A,B,C,D,E,F,G,H,I;
+	para (I<-1;I<=100,I++) 
+	escribir ("ingrese la nota practica:");
+	leer A;
+	escribir ("ingrese la nota del parcial 1,2,3:");
+	leer B;
+	leer C;
+	leer D;
+	escribir ("escribir la nota del examen final:");
+	leer E;
+	F<-A*0.2;
+	G<-((b+c+d)/3)*0.4;
+	H<-E*0.4;
+	I<-F+G+H;
+	escribir ("la ota final es:"),I;
+finpara;	
+Finproceso
+
+
+
+
+
+
+Proceso sueldo
+   real: SN,SH,HT,SB
+   para (I<-1;I<=50,I++) 
+   Escribir ("ingrese el sueldo por hora:"); 
+   Leer (SH);
+   Escribir ("igrese las horas trabajadas:");
+   Leer (HT);
+   Sb<-(SH*HT);
+   SN<-(SB*0.87);
+   Escribir ("el salario neto es:",SN);
+FinPara
+FinProceso
+
+
+
+
+
+
+
+// alumnos.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+
+{
+	float A,B,C,D,E,F,G,H,I;
+	for (I<-1;I<=100,I++)
+	cout<<("ingrese la nota practica:");
+	cin>>A;
+	cout<<("ingrese la nota del parcial 1,2,3:");
+	cin>>B:
+	cin>>C;
+	cin>>D;
+	cout<<("ingrese la nota del examen final:");
+	cin>>E;
+    F<-A*0.2;
+	G<-((b+c+d)/3)*0.4;
+	H<-E*0.4;
+	I<-F+G+H;
+	cout<<("la nota final es:");
+	getch();
+}
+
+
+
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+
+{
+	float HT,PH,SB,SN,IVA;
+	for (I<-1;I<=100,I++)
+	cout<<("introducir hora trabajada:");
+	cin>>HT;
+	cout<<("introducir sueldo por hora:");
+	cin>>PH:
+	IVA=0.13;
+	SB= HT*PH
+	SN= SB-(SB*IVA)
+	cout<<("el sueldo neto es:" <<SN);
+	getch();
+}
+
+
+
