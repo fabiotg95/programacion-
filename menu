@@ -10,25 +10,25 @@ using namespace std;
 
 int main()
 {
-   int a,b,r,opcion;
+   int a,b,opcion;
    cout <<"ingrese a:";
    cin  >>a;
    cout <<"ingrese b:";
    cin  >>b;
    do {
 	  cout << endl;
-    cout <<"1.-suma"     << endl;
-	  cout <<"2.-resta"    << endl;
-	  cout <<"3.-producto" << endl;
-	  cout <<"4.-division" << endl;
+    cout <<"1.-area de un cuadrado"     << endl;
+	  cout <<"2.-area de una circunferencia"    << endl;
+	  cout <<"3.-nota final" << endl;
+	  cout <<"4.-valor absoluto" << endl;
 	     cout <<"0.-salir" << ednl;
     cout << "elige una opcion:";
     cin  >> opcion;
 	  switch (opcion) {
-	         case 1: r = a + b; break;
-	         case 2: r = a - b; break;
-	         case 3: r = a * b; break;
-	         case 4: r = a / b; break;
+	         case 1: r = a*a; break;
+	         case 2: r = a*b; break;
+	         case 3: r = (a+b)/2; break;
+	         case 4: r = a+b; break;
 	         case 0: cout << "salir";break;
     defaul: cout << "opcion invalida" << endl
 }
