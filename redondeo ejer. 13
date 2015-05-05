@@ -1,0 +1,32 @@
+// redondeo.cpp : Defines the entry point for the console application.
+//
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout << "Numero: ";
+    cin >> n;
+
+    if (n > 0 && n < 100)
+        while (n % 10 != 0)
+            n % 10 > 4 ? ++n : --n;
+    else if (n > 99 && n < 999)
+        while (n % 10 != 0 || n / 10 % 10 != 0)
+            n / 10 % 10 > 4 ? ++n : --n;
+    else
+        return 1;
+
+    cout << "Numero redondeado = " << n << endl;
+
+	return 0;
+	getch();
+} 
+
