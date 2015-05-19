@@ -1,0 +1,57 @@
+// tu pedido.cpp char();
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main ()
+void recibir pedido (float restaurante, float pedido, float direccion, float valor)
+{
+	float restaurante, pedido, direccion, valor;
+	cout<<"elija restaurante:";
+	cin>> restaurante;
+	cout<<"mostrar menu:"
+	cout<<"escoger comida:";
+	       
+	     cout<<"desayunos:";
+		 cin>>desayunos;
+	     cout<<"carnes:";
+		 cin>>carnes;
+	     cout<<"sopas:";
+		 cin>>sopas;
+	     cout<<"picadas:";
+		 cin>>picadas;
+	     cout<<"ensaladas:";
+		 cin>>ensaladas;
+       	 cout<<"postres:";
+		 cin>>postres;
+		 cout<<"promociones:";
+		 cin>>promociones;
+		 cout<<"bebidas:";
+		 cin>>bebidas;
+	
+    cout<<"elija opciones:";
+             cout<<"opcion 1:";
+	         cout<<"opcion 2:";
+	         cout<<"opcion 3:";
+	         cout<<"opcion 4:";
+
+	cout<<"reservar pedido:";
+	cin>> pedido;
+	     cout<<"ingrese NIT o ID:";
+		 cin>>NIT
+		 cin>>ID
+		 cout<<"precio a pagar:";
+		 cin>>precio total;
+		 cout<<"tarjeta o efectivo:";
+		 cin>>targeta;
+		 cin>>efectivo
+		 cout<<"ingrese direccion:";
+		 Cin>>direccion;
+	cout<<"tiempo de entrega:";
+	cin>>40 minutos
+			  
+	
