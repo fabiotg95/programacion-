@@ -1,0 +1,54 @@
+// promedio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include  <iostream>
+#include  "conio.h"
+#define    MAX 100
+
+using namespace std;
+
+void cargar( int vec[],int tam);
+void mostar( int vec[],int tam);
+float promedio(int vec[],int tam);
+
+void main()
+{
+	{
+  int n, vector[MAX]
+ float promedio
+  do 
+    { 
+	  cout<<"ingrese el numero de elementos:";
+	  cin>>n;
+	}
+  while ((n<=0)||(n>100));
+
+  cargar (vector,n);
+
+  mostrar (vector,n);
+
+  promedio (vector,n);
+
+  getch();
+}
+
+
+
+
+void cargar(int vec[],int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+		cout<<"ingrese el valor de vec["<<i<<"]:";
+		cin>>vec[];
+	}
+
+void mostrar(int vec[], int tam)
+{
+	for(int i=0;i<tam;i++)
+		{
+			cout<<"vec["<<i<<"]:";
+			cout<<vec[]<<endl;
+}
+}
