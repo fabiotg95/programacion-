@@ -1,0 +1,137 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void recibirPedido(string *pedidos, int telefono, string direccion, string tipo, string ingredientes, int valor)
+{
+int i;
+for (i = 0; i < 10; i++)
+if (pedidos[i][0] == 0)
+break;
+
+pedidos[i][0] = telefono;
+pedidos[i][1] = direccion;
+pedidos[i][2] = tipo;
+pedidos[i][3] = ingredientes;
+pedidos[i][4] = valor;
+}
+
+void entregarPedido(string *pedidos, int telefono)
+{
+int i;
+for (i = 0; i < 10; i++)
+if (atoi(pedidos[i][0].c_str()) == telefono)
+break;
+
+pedidos[i][5] = "true";
+}
+
+void listarPendientes(string *pedidos)
+{
+for (int i = 0; i < 10; i++)
+if (pedidos[i][5] != "true" && pedidos[i][0] != "0")
+{
+cout << "Pedido No" << i+1 << endl
+<< "Telefono: " << pedidos[i][0] << endl
+<< "Direccion: " << pedidos[i][1] << endl
+<< "Tipo: " << pedidos[i][2] << endl
+<< "Ingredientes: " << pedidos[i][3] << endl
+<< "Valor: " << pedidos[i][4] << endl << endl;
+}
+}
+
+void resumenDiario(string *pedidos)
+{
+int count[4]; // 0 normal - 1 grande - 2 familiar - 3 extra
+for (int i = 0; i < 4; i++)
+count[i] == 0;
+int total = 0;
+for (int i = 0; i < 10; i++)
+if (pedidos[i][5] == true)
+{
+total += aoit(pedidos[i][4].c_str());
+if (pedidos[i][2] == "normal")
+count[0]++;
+if (pedidos[i][2] == "grande")
+count[1]++;
+if (pedidos[i][2] == "familiar")
+count[2]++;
+if (pedidos[i][2] == "extra")
+count[3]++;
+}
+cout << "Total Recaudado: " << total << endl
+<< "Pizzas Tipo (Normal): " << count[0] << endl
+<< "Pizzas Tipo (Grande): " << count[0] << endl
+<< "Pizzas Tipo (Familiar): " << count[0] << endl
+<< "Pizzas Tipo (Extra): " << count[0] << endl;
+}
+
+int main()
+{
+string pedidos[10][6]; // Suponiendo que el maximo de pedidos que puede manejar la pizzeria son 10
+int opcion;
+
+for (int i = 0; i < 10; i++)
+{
+pedidos[i][0] = "0";
+pedidos[i][1] = "";
+pedidos[i][2] = "";
+pedidos[i][3] = "";
+pedidos[i][4] = "0";
+pedidos[i][5] = "false";
+}
+
+while (opcion != 5)
+{
+cout << " - 1 Aniadir pedido" << endl
+<< " - 2 Entregar pedido" << endl
+<< " - 3 Listar pedidos pendientes" << endl
+<< " - 4 Resumen diario" << endl
+<< " - 5 Salir" << endl
+<< "Ingrese su opcion:" << endl;
+cin >> opcion;
+
+if (opcion == 1)
+{
+int telefono, valor;
+string direccion, tipo, ingredientes;
+cout << "Telefono: ";
+cin >> telefono;
+getchar();
+cout << "Direccion: ";
+getline(cin, direccion);
+cout << "Tipo: ";
+cin >> tipo;
+getchar();
+cout << "Ingredientes: ";
+getline(cin, ingredientes);
+cout << "Valor: ";
+cin >> valor;
+
+recibirPedido(pedidos, telefono, direccion, tipo, ingredientes, valor);
+}
+else if (opcion == 2)
+{
+int telefono;
+cout << "Telefono: ";
+cin >> telefono;
+entregarPedido(pedidos, telefono);
+}
+else if (opcion == 3)
+{
+listarPendientes(pedidos);
+}
+else if (opcion == 4)
+{
+resumenDiario(pedidos);
+}
+else if (opcion == 5)
+{
+}
+else
+{
+cout << "no esta la opcion" << endl;
+}
+}
+}
